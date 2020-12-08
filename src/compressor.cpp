@@ -22,11 +22,13 @@ int main(){
 
         int cont = 1;
         for(int i = 0; i < numeros.size(); i++){
-            if(numeros[i] == numeros[i+1]){
+            while(numeros[i] == numeros[i+1]){
+                i++;
                 cont++;
             }
             repetidos.push_back(cont);
             repetidos.push_back(numeros[i]);
+            cont = 1;
         }
 
         cout << "\n";
